@@ -1,3 +1,4 @@
+from django.http import HttpResponse
 from django.shortcuts import render
 from rest_framework import generics, status
 from rest_framework.response import Response
@@ -33,3 +34,6 @@ class LogoutView(APIView):
         request.user.auth_token.delete()
         return Response({"message": "Successfully logged out."}, 
                       status=status.HTTP_200_OK)
+
+def home(request):
+    return HttpResponse("Everything Working")
