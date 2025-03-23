@@ -36,4 +36,4 @@ class LogoutView(APIView):
                       status=status.HTTP_200_OK)
 
 def home(request):
-    return HttpResponse("Everything Working")
+    return HttpResponse("<h1>Everything Working with CI/CD</h1>")
